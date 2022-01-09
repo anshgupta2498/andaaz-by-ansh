@@ -45,8 +45,9 @@ export class PayComponent implements OnInit {
           });
         })
       }
-      
+      else{
       this.router.navigate(['failure'],{relativeTo:this.route})
+      }
             },
     err=>{
       this.router.navigate(['failure'],{relativeTo:this.route})
