@@ -1,0 +1,15 @@
+.address {
+    font-size: 1.3rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.address-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

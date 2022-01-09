@@ -1,0 +1,63 @@
+.background {
+    background-image: linear-gradient(to bottom right, rgb(156, 163, 255), rgb(37, 45, 165));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 3rem;
+}
+
+.login-section {
+    background-color: white;
+    padding: 3rem 2rem;
+    min-width: 20%;
+}
+
+.turbo {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.invalid {
+    text-align: center;
+}
+
+.icon {
+    margin-right: 1rem;
+    width: 1.5rem;
+}
+
+.sign-up:hover {
+    cursor: pointer;
+    color: navy !important;
+}
+
+.input-field {
+    display: flex;
+    margin-bottom: 2rem;
+    /* box-sizing: content`-box; */
+}
+
+input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgb(197, 198, 206);
+    border-radius: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 1.1rem;
+}

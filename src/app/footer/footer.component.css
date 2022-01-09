@@ -1,0 +1,91 @@
+.footer {
+    padding: 5rem;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+.upper-part {
+    display: flex;
+    justify-content: space-around;
+}
+
+.turbo {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+    font-size: 2rem;
+}
+
+.first-row,
+.second-row,
+.third-row {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: rgb(139, 143, 146);
+}
+
+.first-row:hover,
+.second-row:hover,
+.third-row:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.address {
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.about {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+}
+
+.mobile {
+    font-size: 1.1rem;
+}
+
+.left-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.general {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social-media {
+    width: 10%;
+    color: white;
+}
+
+.icon {
+    width: 2rem;
+    margin: 0 1rem 0 0;
+}
+
+@media screen and (max-width:792px) {
+    .upper-part {
+        flex-direction: column;
+    }
+    .left-part {
+        width: 100%;
+        text-align: center;
+    }
+    .first-column,
+    .second-column,
+    .third-column,
+    .general {
+        display: none;
+    }
+    .social {
+        align-self: center;
+    }
+}

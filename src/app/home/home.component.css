@@ -1,0 +1,17 @@
+.explore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.explore-text {
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: rgb(167, 14, 14);
+}
+
+.explore-text:hover {
+    cursor: pointer;
+    background-color: maroon;
+}

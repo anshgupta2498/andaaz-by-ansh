@@ -1,0 +1,30 @@
+.items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+}
+
+.image-loader {
+    width: 5%;
+}
+
+.loader {
+    width: 100%;
+}
+
+.item {
+    width: 18%;
+}
+
+@media screen and (max-width:592px) {
+    .item {
+        width: 30%;
+    }
+}

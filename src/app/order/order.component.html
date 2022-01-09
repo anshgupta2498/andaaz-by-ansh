@@ -1,0 +1,10 @@
+<app-nav></app-nav>
+<div class="order">
+    <div class="order-items container">
+        <div class="order-product">
+            <app-orders-order [order_id]="order" *ngFor="let order of ordersObjs"></app-orders-order>
+        </div>
+        <div *ngIf="!flag" class="grand-total h1">YOU HAVE NOT PLACED ANY ORDER YET</div>
+    </div>
+</div>
+<app-footer></app-footer>

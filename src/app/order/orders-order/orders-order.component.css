@@ -1,0 +1,28 @@
+.orders-background {
+    background-color: black;
+}
+
+.order-details {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.total-price {
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width:992px) {
+    .shipping-address,
+    .total-price {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:392px) {
+    .shipping-address,
+    .total-price {
+        font-size: .8rem;
+    }
+}

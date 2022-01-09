@@ -1,0 +1,54 @@
+.image-img {
+    width: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.navigation-keys {
+    width: 3rem;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0%;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+.circle-button {
+    width: 1.5rem;
+    color: rgb(255, 255, 255);
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.circle-button:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}

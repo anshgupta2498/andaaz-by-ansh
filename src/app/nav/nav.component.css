@@ -1,0 +1,42 @@
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name {
+    cursor: pointer;
+}
+
+.top-bar-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-bar-icon-fill {
+    width: 1.5rem;
+    color: white;
+}
+
+.top-bar-icon-fill:hover {
+    cursor: pointer;
+}
+
+.profile-data {
+    display: flex;
+}
+
+.image-thumb {
+    width: 2rem;
+    border-radius: 50%;
+}
+
+.mobileHide {
+    display: block;
+}
+
+@media screen and (max-width:592px) {
+    .mobileHide {
+        display: none;
+    }
+}

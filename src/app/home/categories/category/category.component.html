@@ -1,0 +1,6 @@
+<div (click)="showCategory()" class="category" [ngStyle]="{'background-image': 'url('+category.bgImage+')'}">
+    <!-- <div class="name"></div> -->
+    <div class="overlay">
+        <div class="name-of-category">{{category.name | uppercase}}</div>
+    </div>
+</div>

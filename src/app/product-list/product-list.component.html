@@ -1,0 +1,12 @@
+<app-nav></app-nav>
+<div class="list">
+    <div *ngIf="!all" class="heading display-3 m-5">Showing Results for {{category}}</div>
+    <div *ngIf="all" class="heading display-3 m-5">Explore the andaaz...</div>
+    <div class="image-loader" *ngIf="loading">
+        <img class="loader" src="https://www.joygg.com.ng/img/loading.gif">
+    </div>
+    <div class="items" *ngIf="!loading">
+        <app-product class="mx-5 item" *ngFor="let item of items" [item]="item"></app-product>
+    </div>
+    <div *ngIf="noItemFound && !loading" class="m-5 text-center h2">No Items for category {{category}} found</div>
+</div>

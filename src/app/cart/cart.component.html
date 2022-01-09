@@ -1,0 +1,12 @@
+<app-nav></app-nav>
+<div class="cart">
+    <div class="cart-items container">
+        <div class="cart-product">
+            <app-cart-product class="product" (removeProductEvent)="removeProduct($event)" (event)="addToArray($event)" [item]="item" *ngFor="let item of cartItems"></app-cart-product>
+        </div>
+        <div *ngIf="!hasItems" class="grand-total h1">THERE IS NO ITEM IN YOUR CART.</div>
+        <div *ngIf="hasItems" class="grand-total h1 bg-light p-3 m-3">GRAND TOTAL: Rs. {{total}}</div>
+        <div *ngIf="hasItems" (click)="checkout()" class="m-5 p-3 place-order text-center btn btn-success">Place Order</div>
+    </div>
+</div>
+<app-footer></app-footer>

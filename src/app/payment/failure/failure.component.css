@@ -1,0 +1,13 @@
+.background {
+    background-image: linear-gradient(to bottom right, rgb(180, 87, 87), rgb(77, 1, 1));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+}
+
+.congrats,
+.order-id {
+    box-shadow: 0px 0px 10px black;
+}

@@ -1,0 +1,20 @@
+.order {
+    background-image: linear-gradient(to bottom right, rgb(250, 221, 175), rgb(251, 92, 190));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.in-your-order {
+    align-self: flex-start;
+    justify-self: flex-start;
+}

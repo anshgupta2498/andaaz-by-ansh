@@ -1,0 +1,75 @@
+.background {
+    background-image: linear-gradient(to bottom right, rgb(156, 163, 255), rgb(37, 45, 165));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-section {
+    background-color: white;
+    padding: 3rem 2rem;
+    min-width: 25%;
+    max-width: 40%;
+    box-shadow: 0px 5px 30px black;
+}
+
+.logo {
+    width: 3rem;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.invalid {
+    text-align: center;
+}
+
+.icon {
+    margin-right: 1rem;
+    width: 1.5rem;
+}
+
+.sign-up:hover {
+    cursor: pointer;
+    color: navy !important;
+}
+
+.input-fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-field {
+    width: 45%;
+    display: flex;
+    margin-bottom: 2rem;
+    /* box-sizing: content`-box; */
+}
+
+input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgb(197, 198, 206);
+    border-radius: 0;
+    font-size: 1.1rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 1.1rem;
+}
+
+.errMsg {
+    /* width: 30%; */
+    margin: auto;
+}

@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+@media screen and (max-width:1400px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    html {
+        font-size: 10px;
+    }
+}

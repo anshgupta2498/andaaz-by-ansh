@@ -1,0 +1,30 @@
+.check-out {
+    background-image: linear-gradient(to bottom right, rgb(210, 228, 212), rgb(82, 163, 93));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.addresses {
+    display: flex;
+    justify-content: center;
+}
+
+.address {
+    width: 25%;
+}
+
+@media screen and (max-width:400px) {
+    .addresses {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .address {
+        width: 60%;
+    }
+}

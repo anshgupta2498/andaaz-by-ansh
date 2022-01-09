@@ -1,0 +1,34 @@
+.category {
+    /* width: 15%; */
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    background-color: rgb(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+}
+
+.overlay:hover {
+    cursor: pointer;
+}
+
+.name-of-category {
+    font-weight: bold;
+    font-size: 2.6rem;
+    color: white;
+}
+
+@media screen and (max-width:1296px) {
+    .name-of-category {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,13 @@
+<div class="orders-background my-5">
+    <div class="order-details p-3">
+        <div class="shipping-address total-price text-light">Order Id: {{order_id._id}}
+        </div>
+    </div>
+    <app-individual-order [order_id]="order_id._id" [item]="item" *ngFor="let item of order_id.item">
+    </app-individual-order>
+    <div class="order-details p-3">
+        <div class="total-price text-light">Shipping Address:
+            <span class="house">{{order_id.shippingAddress.house}}, {{order_id.shippingAddress.street}}, {{order_id.shippingAddress.city}}, {{order_id.shippingAddress.state}}</span></div>
+        <div class="total-price text-light">Total: Rs. {{order_id.totalPrice}}</div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<app-nav></app-nav>
+<div class="background">
+    <form class="login-section" #f="ngForm">
+        <div class="logo-section">
+            <p class="text-dark turbo h3">अंदाज़</p>
+        </div>
+        <p class="heading">PAYMENT</p>
+        <div class="input-field">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon" viewBox="0 0 16 16">
+        <path
+          d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z" />
+        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z" />
+
+      </svg><input type="text" class="control" name="Card Number" ngModel placeholder="Card Number" #cardNumber="ngModel" required><br />
+        </div>
+        <div class="bottom-input-fields">
+            <div class="bottom-input-field">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon" viewBox="0 0 16 16">
+          <path
+            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+        </svg><input type="text" class="control" name="card-name" ngModel placeholder="Name" #name="ngModel" required><br />
+            </div>
+            <div class="bottom-input-field">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon" viewBox="0 0 16 16">
+          <path
+            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+        </svg><input type="month" class="control" name="expiry" ngModel placeholder="Expiry Date" #expiry="ngModel" required><br />
+            </div>
+            <div class="bottom-input-field">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon" viewBox="0 0 16 16">
+          <path
+            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+        </svg><input type="text" class="control" name="CVV" ngModel placeholder="CVV" #CVV="ngModel" required><br />
+            </div>
+        </div>
+        <button type="button" [disabled]="CVV.invalid || name.invalid || cardNumber.invalid || expiry.invalid" (click)="pay(cardNumber.value, name.value, expiry.value, CVV.value)" class="w-100 my-3 btn btn-primary">Pay Rs. {{total}} Securely</button>
+    </form>
+</div>
+<app-footer></app-footer>

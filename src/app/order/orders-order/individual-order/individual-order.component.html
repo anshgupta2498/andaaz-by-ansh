@@ -1,0 +1,23 @@
+<div class="cart-product p-4">
+    <div class="left-items">
+        <div class="image">
+            <img [src]="item.item_id.item_image" class="image-img" alt="">
+        </div>
+        <div class="product-title">
+            {{item.item_id.item_brand}}
+        </div>
+        <div class="product-price">
+            {{item.item_id.item_price}}
+        </div>
+        <div class="cross">X</div>
+        <div class="product-price">
+            {{item.quantity}}
+        </div>
+
+    </div>
+    <div class="right-items 5 mr-5">
+        <div class="total-price-of-item">
+            <span class="total-bold"> Rs. {{(item.item_id.item_price * item.quantity)}} /-</span>
+        </div>
+    </div>
+</div>
