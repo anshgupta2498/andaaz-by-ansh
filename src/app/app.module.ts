@@ -34,6 +34,7 @@ import { IndividualOrderComponent } from './order/orders-order/individual-order/
 const appRoutes: Routes =
   [
     {path: '', redirectTo: 'home', pathMatch: 'full' },
+  
     {path: 'home', component: HomeComponent},
     {path: 'product-list', component: ProductListComponent},
     {path: 'cart', component: CartComponent, canActivate:[AuthGuard]},
@@ -51,7 +52,9 @@ const appRoutes: Routes =
   ]},
     {path: 'login', component: LoginComponent},
     {path: 'sign-up', component: SignUpComponent},
-    {path: 'orders', component: OrderComponent, canActivate:[AuthGuard]}
+    {path: 'orders', component: OrderComponent, canActivate:[AuthGuard]},
+    {path: '**', redirectTo:'home', pathMatch:'full'},
+    
 
   ]
 @NgModule({
