@@ -16,14 +16,12 @@ export class AuthGuard implements CanActivate{
             return false
         }
         var cookieArr = document.cookie.split(';')
-        console.log(cookieArr)
         var token = ''
         var flag:boolean = false
         cookieArr.forEach(item=>{
          if(item.startsWith('token='))
             token = item.substr(6)
         
-        console.log(token)
         })
         if(token){
             return this.loginService.verifyToken(token).pipe(
@@ -43,7 +41,6 @@ export class AuthGuard implements CanActivate{
                 }));
         }else{
             this.router.navigate(['login']);
-        console.log('false');
         return false;
     }
 }

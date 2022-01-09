@@ -23,7 +23,6 @@ export class ItemService {
   
   addToCart(itemId:string){
     let headers = new HttpHeaders().set('Authorization', this.loginService.setAuthToken())
-    console.log(this.loginService.setAuthToken())
     var email = this.loginService.user.email
     return this.http.post<{message:string, user:any}>('https://andaaz-by-ansh.herokuapp.com/api/v1/users/addToCart', {email, itemId}, {headers:headers})
   }

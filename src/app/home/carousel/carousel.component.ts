@@ -18,7 +18,6 @@ export class CarouselComponent implements OnInit {
 ngOnInit(): void {
 }
 increment(){
-  console.log(this.counter)
   if(this.counter == this.carouselImages.length-1){
     this.counter = -1
   }

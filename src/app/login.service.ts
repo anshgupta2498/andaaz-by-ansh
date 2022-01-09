@@ -8,20 +8,14 @@ export class LoginService {
   user: any = {}
   token:string = ''
   constructor(public http: HttpClient) {
-    console.log(localStorage.user)
-    console.log(this.user)
     this.user = JSON.parse(localStorage.getItem('user') || '{}')
-    console.log(this.user)
     // this.token = this.setAuthToken();
-    console.log(this.token)
   }
   changeCartQty(obj: any) {
     var user = JSON.parse(localStorage.getItem('user') || '{}')
     var cart: any[] = user.cart
-    console.log(user.cart)
     var newCart: any[] = []
     if (cart.length == 0) {
-      console.log('pushing')
       newCart.push(obj)
       cart.push(obj)
     }
@@ -38,13 +32,9 @@ export class LoginService {
         newCart.push({ qty: item.qty, itemId: item.itemId._id })
       }
     }
-    console.log('obj')
-    console.log(obj)
-    console.log(cart)
     this.user.cart = newCart
     this.saveUserData(this.user).subscribe(data => {
       this.user = data.user
-      console.log(data.user)
       localStorage.setItem('user', JSON.stringify(this.user));
     })
   }
@@ -60,14 +50,12 @@ export class LoginService {
     }
     else {
       var cookieArr = document.cookie.split(';')
-      console.log(cookieArr)
       var token = ''
       var flag: boolean = false
       cookieArr.forEach(item => {
         if (item.startsWith('token=')){
         token = item.substr(6)
         }
-        console.log(token)
       })
     }
     if (token == '') {

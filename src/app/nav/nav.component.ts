@@ -13,7 +13,6 @@ export class NavComponent implements OnInit {
   loggedIn:boolean = false
   ngOnInit(): void {
     this.user = this.service.user
-    console.log(this.user)
     if(Object.keys(this.user).length == 0){
       this.loggedIn = true
     }

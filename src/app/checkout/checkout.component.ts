@@ -14,19 +14,15 @@ export class CheckoutComponent implements OnInit {
   constructor(public router:Router, public itemService:ItemService, public userService:LoginService) { 
     this.cartData = this.router.getCurrentNavigation()?.extras.state
     this.addresses = this.userService.user.address
-    console.log(this.addresses);
     
   }
 
   ngOnInit(): void {
-    console.log(this.itemService.cartSummary); 
-    console.log(this.addresses);
     
   }
   selectAddress(address:any){
     this.cartData.address = address
     this.itemService.shippingAddress = address
-    console.log(this.itemService.shippingAddress);
     
     this.router.navigate(['payment'],{state:this.cartData})
   }

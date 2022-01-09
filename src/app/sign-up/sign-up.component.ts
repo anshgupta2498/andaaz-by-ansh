@@ -16,8 +16,6 @@ export class SignUpComponent implements OnInit {
   ngOnInit(): void {
   }
   signUp(photo:any,name:any, email:any,password:any,passwordConfirm:any ,mobile:any, gender:any, house:any, street:any, city:any, state:any){
-    console.log('signing up')
-    console.log(gender.value, 'gender')
     let user:any = {}
     if(photo.value!='')
       user.photo  = photo.value;
@@ -36,19 +34,14 @@ export class SignUpComponent implements OnInit {
     user.address.push(address)
   
       this.service.signUp(user).subscribe(data=>{
-        console.log("inside obs");
         document.cookie = `token=Bearer ${data.token}`
-      console.log(document.cookie)
       localStorage.setItem('user',JSON.stringify(data.createdUser));
       this.service.user = data.createdUser
-      console.log(data.createdUser)
-      console.log(this.service.user)
       this.router.navigate(['home'])
         this.invalid = false
         this.valid = true;
       },
       err=>{
-        console.log(err);
         this.errMsg = err.error.message;
         this.invalid = true;
         this.valid = false

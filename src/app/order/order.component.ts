@@ -22,10 +22,8 @@ export class OrderComponent implements OnInit {
   }
   fetchOrders(){
     this.ordersIds.forEach((order)=>{
-      console.log(order);
       this.orderService.fetchOrder(order).subscribe(data=>{
         this.ordersObjs.push(data.order)
-        console.log(this.ordersObjs)
       });
     })
   }

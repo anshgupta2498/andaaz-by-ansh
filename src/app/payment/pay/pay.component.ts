@@ -18,31 +18,23 @@ export class PayComponent implements OnInit {
   @Output() event = new EventEmitter<{cardNumber:any,name:any, expiry:any, cvv:any}>();
   ngOnInit(): void {
     if(this.itemService.total == undefined){
-      console.log("hehe")
       this.router.navigate(['cart']);
     }
     this.total = this.itemService.total
-    console.log(this.itemService.totalCartSummary)
     var arr:any[] = []
     this.itemService.totalCartSummary.summary.forEach(element => {
-      console.log(element)
       arr.push({item_id:element.item_id, quantity:element.qty});
     });
     this.orderObj.item = arr
     this.orderObj.user = this.loginService.user._id
     this.orderObj.shippingAddress = this.itemService.shippingAddress
     this.orderObj.totalPrice = this.total
-    console.log(this.orderObj)
   }
 
   pay(cardNumber:string, name:string, expiry:any, cvv:any){
-    console.log(cardNumber, name, expiry, cvv)
     this.paymentService.pay(cardNumber, expiry, cvv, name).subscribe((data:HttpResponse<any>)=>{
       if(data.status==200){
-        console.log('Navigating to success')
-        console.log(this.orderObj)
         this.paymentService.orderPlaced(this.orderObj).subscribe((data)=>{
-          console.log(data)
           localStorage.setItem('order_id',data.order_created._id);
           this.router.navigate(['success'],{relativeTo:this.route})
           var user = this.loginService.user
@@ -53,12 +45,10 @@ export class PayComponent implements OnInit {
           });
         })
       }
-      else {console.log('Navigating to failure')
       
       this.router.navigate(['failure'],{relativeTo:this.route})
-        }    },
+            },
     err=>{
-      console.log('failure')
       this.router.navigate(['failure'],{relativeTo:this.route})
     })
   }

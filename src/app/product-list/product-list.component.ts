@@ -17,22 +17,18 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(data=>{
-      console.log(data);
       if(Object.keys(data).length == 0) this.exploreItems()
       else{
       this.category = data.category
-      console.log(data.category)
       this.getItems();
     }
     })
   }
   getItems(){
     this.itemService.getCategorizedItems(this.category).subscribe(data=>{
-      console.log(data)
       this.items = data.items
       this.loading = false
       if(this.items.length<1){
-        console.log(this.items)
         this.noItemFound = true
       }
     })
@@ -43,7 +39,6 @@ export class ProductListComponent implements OnInit {
       this.items = data.items
       this.loading = false
       if(this.items.length<1){
-         console.log(this.items)
         this.noItemFound = true
       }
     })
