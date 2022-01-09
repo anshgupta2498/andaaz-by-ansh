@@ -73,3 +73,23 @@ input::placeholder {
     /* width: 30%; */
     margin: auto;
 }
+
+@media screen and (max-width:1296px) {
+    .login-section {
+        min-width: 40%;
+        max-width: 74%;
+    }
+}
+
+@media screen and (max-width:786px) {
+    .input-fields {
+        flex-direction: column;
+    }
+    .input-field {
+        width: 90%;
+    }
+    .login-section {
+        min-width: 70%;
+        max-width: 70%;
+    }
+}
